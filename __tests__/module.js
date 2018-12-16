@@ -4,6 +4,20 @@ import sinon from 'sinon';
 
 const render = makeRender({patch});
 
+test('patching', () => {
+  const vnode = ('div',
+    h('button', 'OK')
+  );
+
+  const firstRender = render(vnode);
+  const readForTheFirstTime = firstRender.getByText('OK');
+
+  const secondRender = render(vnode);
+  const readForTheSecondTime = secondRender.getByText('OK');
+
+  expect(readForTheFirstTime).toBe(readForTheSecondTime);
+});
+
 test('clicking buttons', () => {
   const btn1OnClick = sinon.fake();
   const btn2OnClick = sinon.fake();
