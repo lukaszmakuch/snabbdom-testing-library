@@ -2,7 +2,7 @@ import {h, patch} from './../test-utils/vdom';
 import {makeRender, fireEvent, queryByText} from './../src';
 import sinon from 'sinon';
 
-const render = makeRender({patch});
+const render = makeRender({patch})();
 
 test('patching', () => {
   const vnode = ('div',
