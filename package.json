@@ -1,7 +1,7 @@
 {
   "name": "snabbdom-testing-library",
   "version": "0.0.1",
-  "description": "Test snabbdom with dom-testing-library.",
+  "description": "Test Snabbdom with dom-testing-library.",
   "main": "dist/index.js",
   "scripts": {
     "test": "jest --watch",
